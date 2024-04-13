@@ -34,6 +34,15 @@ def main() -> None:
             case 'Golfo':       relacion[2] += region[1]
             case 'Norte':       relacion[3] += region[1]
 
+    # Construir gráfica de barra
+    plt.bar(['Sur', 'Occidente', 'Golfo', 'Norte'], relacion)
+    plt.xticks(rotation = 45)
+    plt.xlabel('Regiones con más capacidad base firme')
+    plt.ylabel('Cantidad de capacidad base firme')
+    plt.title('Evidencia :)')
+
+    # Mostrar gráfica
+    plt.show()
 
 if __name__ == '__main__':
     main()
