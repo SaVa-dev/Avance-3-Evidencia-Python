@@ -1,6 +1,6 @@
 # Avance de la evidencia de Big Data
 
-Trabajo realizado por Cristian Santiago Matus Gutiérrez (SaVa-dev).
+Trabajo realizado por **Cristian Santiago Matus Gutiérrez** (SaVa-dev).
 Creado para la matería de Fundamentos de programación para Big Data.
 
 ## Instrucciones
@@ -13,7 +13,7 @@ Para esta evidencia, se pidió lo siguiente:
 
 ## Pasos realizado
 
-**Parte SQL**
+### Parte SQL
 
 ![Inicio de Xampp](./images/inicioXampp.png)
 
@@ -28,11 +28,43 @@ Todos estos archivos se encuentran en el archivo *"tabla.sql*
 
 Una vez llenado el dataset, podemos continuar con la parte de python
 
-**Parte Python**
+-----
 
-Para poder modificar las tablas SQL a python, se instaló la libreria de mysql.connector.
-Para instalarla, debido a mi distribución de linux, se instaló de la siguiente manera:
+### Parte instalación de librerias de Python
 
+Para poder modificar las tablas SQL a python, se instaló la libreria de `mysql.connector`.
+Para instalarlo, se hace de la siguiente manera:
+
+**Distribuciones Arch Linux (la mía)**
 ```bash
 sudo pacman -S python-mysql-connector
 ```
+
+**Python package manager (pip)**
+```bash
+pip install mysql-connector-python
+```
+
+Una vez instalado, también se necesitó de instalar la libreria `matplotlib`para mostrar gráficos en python.
+Para instalarlo, se hace de la siguiente manera:
+
+**Distribuciones Arch Linux (la mía)**
+```bash
+sudo pacman -S python-matplotlib
+```
+
+**Python package manager (pip)**
+```bash
+pip install matplotlib
+```
+-----
+
+### Visualización de tablas
+
+Para visualizar los datos, se usaron gráficas de barras gracias a su facilidad de mostrar datos, y se decidió relacionar la capacidad base firme total con su zona de inyeccion.
+
+Al final el resultado fue el siguiente:
+
+![Grafica de barras](./images/matplotlibResultado.png)
+
+y es todo jaja (tengo sueño ;-;)
