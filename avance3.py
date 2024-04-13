@@ -1,13 +1,25 @@
 import mysql.connector
+import textwrap
 
 def main() -> None:
-    ds = mysql.connector.connect(
+
+    # Conectar a la base de datos de phpMyAdmin (xampp)
+    db = mysql.connector.connect(
         host        = 'localhost',
         user        = 'root',
         password    = '',
-        database    = ''
+        database    = 'big-data-avance-final'
     )
-    pass
+
+    # Crear un cursor para mandar querys desde python
+    cursor = db.cursor()
+
+    cursor.execute(textwrap.dedent('''
+        CREATE TABLE tablaTest (
+            zona_inyeccion VARCHAR(50)
+        );
+    '''))
+
 
 if __name__ == '__main__':
     main()
